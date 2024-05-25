@@ -3,39 +3,34 @@
 public class Main {
     public static void main(String[] args) {
 
-
-
         System.out.println("Hello and welcome!");
 
         System.out.printf("Initializing banking system..");
 
-        int totalNumberOfSimulaion = 10;
+        int totalNumberOfSimulaion = 50;
         OperationsQueue operationsQueue = new OperationsQueue();
         Bank bank = new Bank("123", operationsQueue);
 
         System.out.println("Initializing simulation....");
-        Thread simulationThread = new Thread(() -> {
+        // Thread simulationThread = new Thread(() -> {
             operationsQueue.addSimulation(totalNumberOfSimulaion);
-        });
-        simulationThread.start();
+        // });
+        // simulationThread.start();
 
 
-        System.out.printf("Initializing deposit systen....");
-        Thread depositThread = new Thread(() -> {
+        System.out.printf("Initializing deposit system....");
+        // Thread depositThread = new Thread(() -> {
             bank.deposit();
-        });
-        depositThread.start();
-        System.out.println("coompleted");
+        // });
+        // depositThread.start();
+        System.out.println("completed");
 
-        System.out.printf("Initializing withdraw systen....");
-        Thread withdrawThread = new Thread(() -> {
+        System.out.printf("Initializing withdraw system....");
+        // Thread withdrawThread = new Thread(() -> {
             bank.withdraw();
-        });
-        withdrawThread.start();
-        System.out.println("coompleted");
-
-
-        System.out.println("coompleted");
-
+        // });
+        // withdrawThread.start();
+        System.out.println("completed");
     }
+
 }

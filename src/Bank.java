@@ -30,6 +30,7 @@ public class Bank {
             }
 
         }
+        operationsQueue.add(-9999);
     }
 
     // A withdraw function that will run in parallel on a separate thread. It will be a loop where in each iteration, it read the amount from the operationQueue and withdraw the amount.
